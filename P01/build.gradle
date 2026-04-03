@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'com.rogue'
+version '1.0-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.googlecode.lanterna:lanterna:3.1.1'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.16.2'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.16.2'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.16.2'
+    testImplementation 'junit:junit:4.13.2'
+}
+
+application {
+    mainClass = 'com.rogue.Main'
+}
